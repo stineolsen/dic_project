@@ -1,2 +1,2 @@
-# dic_project
-dic prosjekt 21
+# Design of integrated circuits project 2021
+
