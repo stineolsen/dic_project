@@ -1,0 +1,451 @@
+#! /opt/eda/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/eda/lib/ivl/system.vpi";
+:vpi_module "/opt/eda/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/eda/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/eda/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/eda/lib/ivl/va_math.vpi";
+:vpi_module "/opt/eda/lib/ivl/v2009.vpi";
+S_0x556f846abef0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x556f846ac080 .scope module, "PIXEL_ARRAY" "PIXEL_ARRAY" 3 12;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "VBN1";
+    .port_info 1 /INPUT 1 "RAMP";
+    .port_info 2 /INPUT 1 "RESET";
+    .port_info 3 /INPUT 1 "ERASE";
+    .port_info 4 /INPUT 1 "EXPOSE";
+    .port_info 5 /INPUT 1 "READ_1";
+    .port_info 6 /INPUT 1 "READ_2";
+    .port_info 7 /INOUT 16 "DATA_1";
+    .port_info 8 /INOUT 16 "DATA_2";
+o0x7f854ec9aca8 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+I0x556f846ea780 .island tran;
+p0x7f854ec9aca8 .port I0x556f846ea780, o0x7f854ec9aca8;
+v0x556f8470e780_0 .net8 "DATA_1", 15 0, p0x7f854ec9aca8;  0 drivers, strength-aware
+o0x7f854ec9acd8 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+I0x556f846e9c50 .island tran;
+p0x7f854ec9acd8 .port I0x556f846e9c50, o0x7f854ec9acd8;
+v0x556f8470e880_0 .net8 "DATA_2", 15 0, p0x7f854ec9acd8;  0 drivers, strength-aware
+o0x7f854ec9a048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470e960_0 .net "ERASE", 0 0, o0x7f854ec9a048;  0 drivers
+o0x7f854ec9a078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ea90_0 .net "EXPOSE", 0 0, o0x7f854ec9a078;  0 drivers
+o0x7f854ec9a0a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ebc0_0 .net "RAMP", 0 0, o0x7f854ec9a0a8;  0 drivers
+o0x7f854ec9a0d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ecf0_0 .net "READ_1", 0 0, o0x7f854ec9a0d8;  0 drivers
+o0x7f854ec9a708 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ed90_0 .net "READ_2", 0 0, o0x7f854ec9a708;  0 drivers
+o0x7f854ec9a108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ee30_0 .net "RESET", 0 0, o0x7f854ec9a108;  0 drivers
+o0x7f854ec9a138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x556f8470ef60_0 .net "VBN1", 0 0, o0x7f854ec9a138;  0 drivers
+p0x7f854ec9a018 .port I0x556f846ea780, L_0x556f8470f220;
+ .tranvp 16 8 0, I0x556f846ea780, p0x7f854ec9aca8 p0x7f854ec9a018;
+p0x7f854ec9a408 .port I0x556f846ea780, L_0x556f8470f360;
+ .tranvp 16 8 8, I0x556f846ea780, p0x7f854ec9aca8 p0x7f854ec9a408;
+p0x7f854ec9a6d8 .port I0x556f846e9c50, L_0x556f8470f510;
+ .tranvp 16 8 0, I0x556f846e9c50, p0x7f854ec9acd8 p0x7f854ec9a6d8;
+p0x7f854ec9a9d8 .port I0x556f846e9c50, L_0x556f8470f690;
+ .tranvp 16 8 8, I0x556f846e9c50, p0x7f854ec9acd8 p0x7f854ec9a9d8;
+S_0x556f846e8f30 .scope module, "pixel_sensor1" "PIXEL_SENSOR" 3 26, 4 36 0, S_0x556f846ac080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "VBN1";
+    .port_info 1 /INPUT 1 "RAMP";
+    .port_info 2 /INPUT 1 "RESET";
+    .port_info 3 /INPUT 1 "ERASE";
+    .port_info 4 /INPUT 1 "EXPOSE";
+    .port_info 5 /INPUT 1 "READ";
+    .port_info 6 /INOUT 8 "DATA";
+P_0x556f846e90c0 .param/real "dv_pixel" 0 4 49, Cr<m4000000000000000gfc1>; value=0.500000
+v0x556f846db5d0_0 .net8 "DATA", 7 0, p0x7f854ec9a018;  1 drivers, strength-aware
+v0x556f846dbb60_0 .net "ERASE", 0 0, o0x7f854ec9a048;  alias, 0 drivers
+v0x556f846dc200_0 .net "EXPOSE", 0 0, o0x7f854ec9a078;  alias, 0 drivers
+v0x556f846df810_0 .net "RAMP", 0 0, o0x7f854ec9a0a8;  alias, 0 drivers
+v0x556f846dcfb0_0 .net "READ", 0 0, o0x7f854ec9a0d8;  alias, 0 drivers
+v0x556f846da6f0_0 .net "RESET", 0 0, o0x7f854ec9a108;  alias, 0 drivers
+v0x556f846d7ce0_0 .net "VBN1", 0 0, o0x7f854ec9a138;  alias, 0 drivers
+o0x7f854ec9a168 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0x556f8470b460_0 name=_ivl_0
+v0x556f8470b540_0 .var/real "adc", 0 0;
+v0x556f8470b600_0 .var "cmp", 0 0;
+v0x556f8470b6c0_0 .var/real "lsb", 0 0;
+v0x556f8470b780_0 .var "p_data", 7 0;
+v0x556f8470b860_0 .var/real "tmp", 0 0;
+v0x556f8470b920_0 .var/real "v_erase", 0 0;
+E_0x556f846d78f0 .event edge, v0x556f8470b600_0, v0x556f846db5d0_0;
+E_0x556f846e1290 .event posedge, v0x556f846df810_0;
+E_0x556f846e1520 .event posedge, v0x556f846d7ce0_0;
+E_0x556f846dfae0 .event edge, v0x556f846dbb60_0;
+L_0x556f8470f220 .functor MUXZ 8, o0x7f854ec9a168, v0x556f8470b780_0, o0x7f854ec9a0d8, C4<>;
+S_0x556f8470bac0 .scope module, "pixel_sensor2" "PIXEL_SENSOR" 3 36, 4 36 0, S_0x556f846ac080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "VBN1";
+    .port_info 1 /INPUT 1 "RAMP";
+    .port_info 2 /INPUT 1 "RESET";
+    .port_info 3 /INPUT 1 "ERASE";
+    .port_info 4 /INPUT 1 "EXPOSE";
+    .port_info 5 /INPUT 1 "READ";
+    .port_info 6 /INOUT 8 "DATA";
+P_0x556f8470bc70 .param/real "dv_pixel" 0 4 49, Cr<m4000000000000000gfc1>; value=0.500000
+v0x556f8470bde0_0 .net8 "DATA", 7 0, p0x7f854ec9a408;  1 drivers, strength-aware
+v0x556f8470bee0_0 .net "ERASE", 0 0, o0x7f854ec9a048;  alias, 0 drivers
+v0x556f8470bfa0_0 .net "EXPOSE", 0 0, o0x7f854ec9a078;  alias, 0 drivers
+v0x556f8470c040_0 .net "RAMP", 0 0, o0x7f854ec9a0a8;  alias, 0 drivers
+v0x556f8470c0e0_0 .net "READ", 0 0, o0x7f854ec9a0d8;  alias, 0 drivers
+v0x556f8470c1d0_0 .net "RESET", 0 0, o0x7f854ec9a108;  alias, 0 drivers
+v0x556f8470c270_0 .net "VBN1", 0 0, o0x7f854ec9a138;  alias, 0 drivers
+o0x7f854ec9a438 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0x556f8470c310_0 name=_ivl_0
+v0x556f8470c3b0_0 .var/real "adc", 0 0;
+v0x556f8470c450_0 .var "cmp", 0 0;
+v0x556f8470c4f0_0 .var/real "lsb", 0 0;
+v0x556f8470c590_0 .var "p_data", 7 0;
+v0x556f8470c630_0 .var/real "tmp", 0 0;
+v0x556f8470c6d0_0 .var/real "v_erase", 0 0;
+E_0x556f846de760 .event edge, v0x556f8470c450_0, v0x556f8470bde0_0;
+L_0x556f8470f360 .functor MUXZ 8, o0x7f854ec9a438, v0x556f8470c590_0, o0x7f854ec9a0d8, C4<>;
+S_0x556f8470c870 .scope module, "pixel_sensor3" "PIXEL_SENSOR" 3 46, 4 36 0, S_0x556f846ac080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "VBN1";
+    .port_info 1 /INPUT 1 "RAMP";
+    .port_info 2 /INPUT 1 "RESET";
+    .port_info 3 /INPUT 1 "ERASE";
+    .port_info 4 /INPUT 1 "EXPOSE";
+    .port_info 5 /INPUT 1 "READ";
+    .port_info 6 /INOUT 8 "DATA";
+P_0x556f8470ca30 .param/real "dv_pixel" 0 4 49, Cr<m4000000000000000gfc1>; value=0.500000
+v0x556f8470cba0_0 .net8 "DATA", 7 0, p0x7f854ec9a6d8;  1 drivers, strength-aware
+v0x556f8470cca0_0 .net "ERASE", 0 0, o0x7f854ec9a048;  alias, 0 drivers
+v0x556f8470cdb0_0 .net "EXPOSE", 0 0, o0x7f854ec9a078;  alias, 0 drivers
+v0x556f8470cea0_0 .net "RAMP", 0 0, o0x7f854ec9a0a8;  alias, 0 drivers
+v0x556f8470cf90_0 .net "READ", 0 0, o0x7f854ec9a708;  alias, 0 drivers
+v0x556f8470d080_0 .net "RESET", 0 0, o0x7f854ec9a108;  alias, 0 drivers
+v0x556f8470d170_0 .net "VBN1", 0 0, o0x7f854ec9a138;  alias, 0 drivers
+o0x7f854ec9a738 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0x556f8470d260_0 name=_ivl_0
+v0x556f8470d320_0 .var/real "adc", 0 0;
+v0x556f8470d3e0_0 .var "cmp", 0 0;
+v0x556f8470d4a0_0 .var/real "lsb", 0 0;
+v0x556f8470d560_0 .var "p_data", 7 0;
+v0x556f8470d640_0 .var/real "tmp", 0 0;
+v0x556f8470d700_0 .var/real "v_erase", 0 0;
+E_0x556f846e51c0 .event edge, v0x556f8470d3e0_0, v0x556f8470cba0_0;
+L_0x556f8470f510 .functor MUXZ 8, o0x7f854ec9a738, v0x556f8470d560_0, o0x7f854ec9a708, C4<>;
+S_0x556f8470d8a0 .scope module, "pixel_sensor4" "PIXEL_SENSOR" 3 56, 4 36 0, S_0x556f846ac080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "VBN1";
+    .port_info 1 /INPUT 1 "RAMP";
+    .port_info 2 /INPUT 1 "RESET";
+    .port_info 3 /INPUT 1 "ERASE";
+    .port_info 4 /INPUT 1 "EXPOSE";
+    .port_info 5 /INPUT 1 "READ";
+    .port_info 6 /INOUT 8 "DATA";
+P_0x556f8470da30 .param/real "dv_pixel" 0 4 49, Cr<m4000000000000000gfc1>; value=0.500000
+v0x556f8470dbc0_0 .net8 "DATA", 7 0, p0x7f854ec9a9d8;  1 drivers, strength-aware
+v0x556f8470dcc0_0 .net "ERASE", 0 0, o0x7f854ec9a048;  alias, 0 drivers
+v0x556f8470dd80_0 .net "EXPOSE", 0 0, o0x7f854ec9a078;  alias, 0 drivers
+v0x556f8470de20_0 .net "RAMP", 0 0, o0x7f854ec9a0a8;  alias, 0 drivers
+v0x556f8470dec0_0 .net "READ", 0 0, o0x7f854ec9a708;  alias, 0 drivers
+v0x556f8470dfb0_0 .net "RESET", 0 0, o0x7f854ec9a108;  alias, 0 drivers
+v0x556f8470e050_0 .net "VBN1", 0 0, o0x7f854ec9a138;  alias, 0 drivers
+o0x7f854ec9aa08 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0x556f8470e0f0_0 name=_ivl_0
+v0x556f8470e190_0 .var/real "adc", 0 0;
+v0x556f8470e2c0_0 .var "cmp", 0 0;
+v0x556f8470e380_0 .var/real "lsb", 0 0;
+v0x556f8470e440_0 .var "p_data", 7 0;
+v0x556f8470e520_0 .var/real "tmp", 0 0;
+v0x556f8470e5e0_0 .var/real "v_erase", 0 0;
+E_0x556f846da9c0 .event edge, v0x556f8470e2c0_0, v0x556f8470dbc0_0;
+L_0x556f8470f690 .functor MUXZ 8, o0x7f854ec9aa08, v0x556f8470e440_0, o0x7f854ec9a708, C4<>;
+    .scope S_0x556f846e8f30;
+T_0 ;
+    %pushi/real 1288490188, 4066; load=1.20000
+    %pushi/real 3355443, 4044; load=1.20000
+    %add/wr;
+    %store/real v0x556f8470b920_0;
+    %load/real v0x556f8470b920_0;
+    %pushi/vec4 255, 0, 32;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v0x556f8470b6c0_0;
+    %end;
+    .thread T_0, $init;
+    .scope S_0x556f846e8f30;
+T_1 ;
+    %wait E_0x556f846dfae0;
+    %load/real v0x556f8470b920_0;
+    %store/real v0x556f8470b860_0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x556f8470b780_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556f8470b600_0, 0, 1;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v0x556f8470b540_0;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0x556f846e8f30;
+T_2 ;
+    %wait E_0x556f846e1520;
+    %load/vec4 v0x556f846dc200_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %load/real v0x556f8470b860_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %load/real v0x556f8470b6c0_0;
+    %mul/wr;
+    %sub/wr;
+    %store/real v0x556f8470b860_0;
+T_2.0 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x556f846e8f30;
+T_3 ;
+    %wait E_0x556f846e1290;
+    %load/real v0x556f8470b540_0;
+    %load/real v0x556f8470b6c0_0;
+    %add/wr;
+    %store/real v0x556f8470b540_0;
+    %load/real v0x556f8470b860_0;
+    %load/real v0x556f8470b540_0;
+    %cmp/wr;
+    %jmp/0xz  T_3.0, 5;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x556f8470b600_0, 0;
+T_3.0 ;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x556f846e8f30;
+T_4 ;
+Ewait_0 .event/or E_0x556f846d78f0, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v0x556f8470b600_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.0, 8;
+    %load/vec4 v0x556f846db5d0_0;
+    %store/vec4 v0x556f8470b780_0, 0, 8;
+T_4.0 ;
+    %jmp T_4;
+    .thread T_4, $push;
+    .scope S_0x556f8470bac0;
+T_5 ;
+    %pushi/real 1288490188, 4066; load=1.20000
+    %pushi/real 3355443, 4044; load=1.20000
+    %add/wr;
+    %store/real v0x556f8470c6d0_0;
+    %load/real v0x556f8470c6d0_0;
+    %pushi/vec4 255, 0, 32;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v0x556f8470c4f0_0;
+    %end;
+    .thread T_5, $init;
+    .scope S_0x556f8470bac0;
+T_6 ;
+    %wait E_0x556f846dfae0;
+    %load/real v0x556f8470c6d0_0;
+    %store/real v0x556f8470c630_0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x556f8470c590_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556f8470c450_0, 0, 1;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v0x556f8470c3b0_0;
+    %jmp T_6;
+    .thread T_6, $push;
+    .scope S_0x556f8470bac0;
+T_7 ;
+    %wait E_0x556f846e1520;
+    %load/vec4 v0x556f8470bfa0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_7.0, 8;
+    %load/real v0x556f8470c630_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %load/real v0x556f8470c4f0_0;
+    %mul/wr;
+    %sub/wr;
+    %store/real v0x556f8470c630_0;
+T_7.0 ;
+    %jmp T_7;
+    .thread T_7;
+    .scope S_0x556f8470bac0;
+T_8 ;
+    %wait E_0x556f846e1290;
+    %load/real v0x556f8470c3b0_0;
+    %load/real v0x556f8470c4f0_0;
+    %add/wr;
+    %store/real v0x556f8470c3b0_0;
+    %load/real v0x556f8470c630_0;
+    %load/real v0x556f8470c3b0_0;
+    %cmp/wr;
+    %jmp/0xz  T_8.0, 5;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x556f8470c450_0, 0;
+T_8.0 ;
+    %jmp T_8;
+    .thread T_8;
+    .scope S_0x556f8470bac0;
+T_9 ;
+Ewait_1 .event/or E_0x556f846de760, E_0x0;
+    %wait Ewait_1;
+    %load/vec4 v0x556f8470c450_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_9.0, 8;
+    %load/vec4 v0x556f8470bde0_0;
+    %store/vec4 v0x556f8470c590_0, 0, 8;
+T_9.0 ;
+    %jmp T_9;
+    .thread T_9, $push;
+    .scope S_0x556f8470c870;
+T_10 ;
+    %pushi/real 1288490188, 4066; load=1.20000
+    %pushi/real 3355443, 4044; load=1.20000
+    %add/wr;
+    %store/real v0x556f8470d700_0;
+    %load/real v0x556f8470d700_0;
+    %pushi/vec4 255, 0, 32;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v0x556f8470d4a0_0;
+    %end;
+    .thread T_10, $init;
+    .scope S_0x556f8470c870;
+T_11 ;
+    %wait E_0x556f846dfae0;
+    %load/real v0x556f8470d700_0;
+    %store/real v0x556f8470d640_0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x556f8470d560_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556f8470d3e0_0, 0, 1;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v0x556f8470d320_0;
+    %jmp T_11;
+    .thread T_11, $push;
+    .scope S_0x556f8470c870;
+T_12 ;
+    %wait E_0x556f846e1520;
+    %load/vec4 v0x556f8470cdb0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_12.0, 8;
+    %load/real v0x556f8470d640_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %load/real v0x556f8470d4a0_0;
+    %mul/wr;
+    %sub/wr;
+    %store/real v0x556f8470d640_0;
+T_12.0 ;
+    %jmp T_12;
+    .thread T_12;
+    .scope S_0x556f8470c870;
+T_13 ;
+    %wait E_0x556f846e1290;
+    %load/real v0x556f8470d320_0;
+    %load/real v0x556f8470d4a0_0;
+    %add/wr;
+    %store/real v0x556f8470d320_0;
+    %load/real v0x556f8470d640_0;
+    %load/real v0x556f8470d320_0;
+    %cmp/wr;
+    %jmp/0xz  T_13.0, 5;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x556f8470d3e0_0, 0;
+T_13.0 ;
+    %jmp T_13;
+    .thread T_13;
+    .scope S_0x556f8470c870;
+T_14 ;
+Ewait_2 .event/or E_0x556f846e51c0, E_0x0;
+    %wait Ewait_2;
+    %load/vec4 v0x556f8470d3e0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_14.0, 8;
+    %load/vec4 v0x556f8470cba0_0;
+    %store/vec4 v0x556f8470d560_0, 0, 8;
+T_14.0 ;
+    %jmp T_14;
+    .thread T_14, $push;
+    .scope S_0x556f8470d8a0;
+T_15 ;
+    %pushi/real 1288490188, 4066; load=1.20000
+    %pushi/real 3355443, 4044; load=1.20000
+    %add/wr;
+    %store/real v0x556f8470e5e0_0;
+    %load/real v0x556f8470e5e0_0;
+    %pushi/vec4 255, 0, 32;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v0x556f8470e380_0;
+    %end;
+    .thread T_15, $init;
+    .scope S_0x556f8470d8a0;
+T_16 ;
+    %wait E_0x556f846dfae0;
+    %load/real v0x556f8470e5e0_0;
+    %store/real v0x556f8470e520_0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x556f8470e440_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556f8470e2c0_0, 0, 1;
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v0x556f8470e190_0;
+    %jmp T_16;
+    .thread T_16, $push;
+    .scope S_0x556f8470d8a0;
+T_17 ;
+    %wait E_0x556f846e1520;
+    %load/vec4 v0x556f8470dd80_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_17.0, 8;
+    %load/real v0x556f8470e520_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %load/real v0x556f8470e380_0;
+    %mul/wr;
+    %sub/wr;
+    %store/real v0x556f8470e520_0;
+T_17.0 ;
+    %jmp T_17;
+    .thread T_17;
+    .scope S_0x556f8470d8a0;
+T_18 ;
+    %wait E_0x556f846e1290;
+    %load/real v0x556f8470e190_0;
+    %load/real v0x556f8470e380_0;
+    %add/wr;
+    %store/real v0x556f8470e190_0;
+    %load/real v0x556f8470e520_0;
+    %load/real v0x556f8470e190_0;
+    %cmp/wr;
+    %jmp/0xz  T_18.0, 5;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x556f8470e2c0_0, 0;
+T_18.0 ;
+    %jmp T_18;
+    .thread T_18;
+    .scope S_0x556f8470d8a0;
+T_19 ;
+Ewait_3 .event/or E_0x556f846da9c0, E_0x0;
+    %wait Ewait_3;
+    %load/vec4 v0x556f8470e2c0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_19.0, 8;
+    %load/vec4 v0x556f8470dbc0_0;
+    %store/vec4 v0x556f8470e440_0, 0, 8;
+T_19.0 ;
+    %jmp T_19;
+    .thread T_19, $push;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "pixelArray.v";
+    "pixelSensor.v";
